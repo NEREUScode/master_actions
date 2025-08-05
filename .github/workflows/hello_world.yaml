@@ -32,9 +32,10 @@ jobs:
         run: cd Stage_2_eme_annee_docs
       - name: touch the file
         run: touch test.html 
-      - name: add
-        run: git add test.html 
+      - name: add a thing
+        run: git add . 
       - name: commit 
         run: git commit -m " add a test"
       - name: push 
         run: git push origin main
+        shell: bash
