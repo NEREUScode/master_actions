@@ -23,5 +23,18 @@ jobs:
       - name: goodbye world
         run: echo "goodbye"
         shell: bash 
-
-
+  pushthing: 
+    runs-on: ubuntu-latest
+    steps: 
+      - name: clone the repo
+        run: git clone https://github.com/NEREUScode/Stage_2_eme_annee_docs.git
+      - name: cd the dir
+        run: cd Stage_2_eme_annee_docs
+      - name: touch the file
+        run: touch test.html 
+      - name: add
+        run: git add test.html 
+      - name: commit 
+        run: git commit -m " add a test"
+      - name: push 
+        run: git push origin main
