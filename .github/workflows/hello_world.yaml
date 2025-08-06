@@ -3,10 +3,10 @@ name: hello world workflow
 on:
   push:
     branches:
-      - main 
+      - main
   pull_request:
     branches:
-      - main 
+      - main
   workflow_dispatch:
 
 jobs:
@@ -15,28 +15,11 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: hello world
-        run: echo "hello world" 
+        run: echo "hello world"
         shell: bash
   goodbye:
-    runs-on: ubuntu-latest 
+    runs-on: ubuntu-latest
     steps:
       - name: goodbye world
         run: echo "goodbye"
-        shell: bash 
-  pushthing: 
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4 
-      - name: clone the repo
-        run: git clone https://github.com/NEREUScode/Stage_2_eme_annee_docs.git
-      - name: cd the dir
-        run: cd Stage_2_eme_annee_docs
-      - name: touch the file
-        run: touch test.html 
-      - name: add a thing
-        run: git add . 
-      - name: commit 
-        run: git commit -m " add a test"
-      - name: push 
-        run: git push origin main
         shell: bash
